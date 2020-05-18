@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tareas</title>
+    <style> 
+    body{
+        display:grid;
+        grid-template-columns: 1fr minmax(400px, 1200px) 1fr;
+        grid-auto-rows: auto;
+    }
+    .screen{
+        grid-column: 2/3;
+        grid-row: 1/2;
+        display: none;
+    }
+    </style>
+</head>
+<body>
+    <div id="menu" class="screen">
+        <h1>Este es el menu.</h1>
+        <button class="irAdd">Añadir</button>
+    </div>
+    <div id="add" class="screen">
+        <h1>Acá se añanden tareas.</h1>
+    </div>
+    <div id="lista" class="screen">
+        <h1>Acá se ve la liesta de tareas.</h1>
+        <ol>
+            <li>Hacer tarea informática</li>
+            <li>Hacer tarea física</li>
+            <li>Estudiar fisica</li>
+            <li>Estudiar energia</li>
+        </ol>
+        <button class="irAdd">Añadir</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

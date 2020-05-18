@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tareas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+      body {
+        display: grid;
+        grid-template-columns: 1fr minmax(400px, 1200px) 1fr;
+        grid-template-rows: auto;
+      }
+      .screen {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div id="login" class="screen">
+        <h1>Bienvenido.</h1>
+        <p class="font-weight-light" class="text-muted">Acá se inicia sesión, ingrese su usuario y su contraseña.</p>
+        <form id = "formainicioSesion">
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" class="form-control" id="nombre" required/>
+              </div>
+              <div class="form-group">
+                <label for="password">Contraseña</label>
+                <input type="password" class="form-control" id="password" required/>
+              </div>
+              <button type="submit">Iniciar sesión</button>
+        </form>
+        <button id= "irCrearUsua">Crear Usuario</button>
+      </div>
+    <div id="menu" class="screen">
+      <h1>Este es el menú.</h1>
+      <button class="irAAdd">Añadir</button>
+      <button class="irLista">Lista</button>
+    </div>
+    <div id="add" class="screen">
+      <h1>Acá se añaden tareas</h1>
+      <form id = "formaAñadir">
+        <div class="form-group">
+            <label for="materia">Materia</label>
+            <input type="text" class="form-control" id="materia" required/>
+          </div>
+          <div class="form-group">
+            <label for="detalle">Detalle</label>
+            <input type="text" class="form-control" id="detalle" required/>
+          </div>
+          <div class="form-group">
+            <label for="fechalimite">Fecha Límite</label>
+            <input type="date" class="form-control" id="fechalimite" required/>
+          </div>
+          <button type="submit">Añadir</button>
+    </form>
+      <button class="irMenu">Menú</button>
+      <button class="irLista">Lista</button>
+    </div>
+    <div id="lista" class="screen">
+      <h1>Acá se ve la lista de tareas</h1>
+      <table class="table" id="tablaTareas"></table>
+      <button class="irAAdd">Añadir</button>
+      <button class="irMenu">Menú</button>
+    </div>
+    <div id ="crearUsuario" class="screen">
+      <h1>Crear Usuario.</h1>
+      <p class="font-weight-light" class="text-muted">Acá deberá crear un usuario para poder acceder a la página.</p>
+      <form id = "formaCrearUsuario">
+          <div class="form-group">
+              <label for="nombre">Nombre</label>
+              <input type="text" class="form-control" id="nombre" required/>
+            </div>
+            <div class="form-group">
+              <label for="password">Contraseña</label>
+              <input type="password" class="form-control" id="password" required/>
+            </div>
+            <div class="form-group">
+              <label for="password">Confirmar Contraseña</label>
+              <input type="password" class="form-control" id="password" required/>
+            </div>
+            <button type="submit">Crear Usuario</button>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
