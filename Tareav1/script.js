@@ -73,6 +73,12 @@ for (boton of botonesLista) {
 let botonNuevoUsuario = document.getElementById("irCrearUsua");
   botonNuevoUsuario.onclick = () => mostrar("crearUsuario")
 
+
+let botonesCerrarSesión = document.getElementsByClassName("irCerrarSesión");
+for (boton of botonesCerrarSesión) {
+  boton.onclick = () => mostrar("login")
+}
+
 let tareas = [
   {materia:"Física", detalle:"Hacer el laboratorio de movimiento parabólico", fecha: new Date(2020, 4, 25), nombreUsuario: "Luis"},
   {materia:"Informática", detalle:"Hacer el laboratorio de js", fecha: new Date(2020, 4, 20), nombreUsuario: "Maria"},
